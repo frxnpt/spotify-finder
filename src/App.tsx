@@ -6,12 +6,15 @@ import Artists from "./pages/Artists/Artists";
 import Albums from "./pages/Albums/Albums";
 import Tracks from "./pages/Tracks/Tracks";
 import ProtectedRoute from "./components/Auth/ProtectedRoute";
+import "./styles/_global.scss";
+import Header from "./components/Containers/Header";
 
 function App() {
 	let auth = true;
 	return (
 		<BrowserRouter>
 			<div className="container">
+				<Header />
 				<Routes>
 					<Route
 						path="/overview"
