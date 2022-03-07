@@ -21,6 +21,14 @@
 }
 .smallItemContainer {
 	display: flex;
-	flex-direction: column;
 	width: 48%;
+}
+.itemContainerGroup {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.itemContainer {
+	width: 100%;
+	display: flex;
 }
