@@ -1,5 +1,5 @@
 import React from 'react'
-import { Artist } from '../../api/SpotifyTypes';
+import { Artist } from '../../../api/SpotifyTypes';
 
 type ArtistItemProps = {
     artist: Artist;
@@ -22,6 +22,7 @@ export const ArtistItem = ({artist}: ArtistItemProps) => {
                 <p className="itemInfoContent">{artist.type}</p>
             </div>
         </div>
+        
         <a href={"https://open.spotify.com/" + artist.type + "/" + artist.id} target="_blank" rel='noreferrer' className="itemLink">Open Spotify</a>
     </div>
 </div>
