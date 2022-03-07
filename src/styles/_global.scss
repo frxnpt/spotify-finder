@@ -1,0 +1,31 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+      display: flex;
+      flex-direction: column;
+      color: white;
+  }
+
+  .header {
+    text-align: center;
+    color: $green;
+    font-size: 50px;
+    margin: 50px;
+  }
+  
+  body {
+    box-sizing: border-box;
+    background-color: $black;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 100%;
+  }
