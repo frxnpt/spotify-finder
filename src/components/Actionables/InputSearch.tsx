@@ -1,14 +1,23 @@
 import React from "react";
 
 type InputSearchProps = {
-    updateSearch : () => void
+    onSearch : (search: string) => void
+	onClear : () => void
 }
 
-export const InputSearch = ({updateSearch}:InputSearchProps) => {
+export const InputSearch = ({onSearch, onClear}:InputSearchProps) => {
+	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const searchQuery = event.target.value;
+		if (searchQuery === "") {
+			onClear();
+			return;
+		}
+		onSearch(searchQuery)
+	}
 	return (
 		<input
 			id="search"
-			onChange={updateSearch}
+			onChange={onChange}
 			type="search"
 			placeholder="Artists, Tracks, Albums..."
 		/>
