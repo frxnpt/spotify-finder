@@ -14,7 +14,6 @@ import { ItemContext } from "./context/Items/ItemContext";
 //TODO: move routes to react.js file and import them here using a map
 function App() {
 	const [authToken, setAuthToken] = useState("");
-	const [isAuthenticated, setIsAuthenticated] = useState(false)
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
 	//const [spotifyItems, setSpotifyItems] = useState({} as SpotifyItemsResponse);
 	const [albums, setAlbums] = useState<Album[]>([]);
