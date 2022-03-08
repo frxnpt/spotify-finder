@@ -1,5 +1,4 @@
 import React from "react";
-import { InputSearch } from "../Actionables/InputSearch";
 
 export const Header = () => {
 	return (
