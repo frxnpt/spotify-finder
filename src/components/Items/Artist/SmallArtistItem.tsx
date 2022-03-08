@@ -1,18 +1,20 @@
 import React from "react";
 import { Artist } from "../../../api/SpotifyTypes";
+import { getArtistOrAlbumImageURL } from "../../../utils/getItemImage";
 
 type ArtistItemProps = {
 	artist: Artist;
 };
 
 export const SmallArtistItem = ({ artist }: ArtistItemProps) => {
+	const artistImage = getArtistOrAlbumImageURL(artist)
 	return (
 		<div key={artist.id}>
 			<div className="listItem">
 				<img
 					className="itemImg"
 					alt="item pic"
-					src={artist.images[2].url}
+					src={artistImage}
 				></img>
 				<div className="itemInfoGroup">
 					<div className="itemInfo">
