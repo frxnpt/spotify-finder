@@ -1,4 +1,5 @@
 import React from "react";
+import './InputSearch.scss'
 
 type InputSearchProps = {
     onSearch : (search: string) => void
