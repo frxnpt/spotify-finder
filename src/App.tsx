@@ -18,10 +18,13 @@ function App() {
 	//const [spotifyItems, setSpotifyItems] = useState({} as SpotifyItemsResponse);
 	const [albums, setAlbums] = useState<Album[]>([]);
 	const [artists, setArtists] = useState<Artist[]>([]);
-	const [tracks, setTracks] = useState<Track[]>([]);	
+	const [tracks, setTracks] = useState<Track[]>([]);
+	const [searchQuery, setSearchQuery] = useState("");
 
 	return (
-		<ItemContext.Provider value={{ albums, setAlbums, tracks, setTracks, artists, setArtists}}>
+		<ItemContext.Provider
+			value={{ albums, setAlbums, tracks, setTracks, artists, setArtists }}
+		>
 			<AuthContext.Provider
 				value={{ authToken, setAuthToken, isAuthenticated, setIsAuthenticated }}
 			>
