@@ -1,5 +1,4 @@
-import React, { createContext, Dispatch, SetStateAction } from 'react'
-import { SignInWithSpotifyResponse } from '../../api/SpotifyTypes';
+import { createContext, Dispatch, SetStateAction } from 'react'
 
 export type AuthContextProps = {
 	authToken: string
