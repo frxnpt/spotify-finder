@@ -6,7 +6,7 @@ type BigContainerBoxProps = {
 }
 export const BigContainerBox = ({children}: BigContainerBoxProps) => {
   return (
-    <div className="container-wrapper">
+    <div className="bigContainerBox-wrapper">
       <div className="bigContainerBox">
         {children}
       </div>
