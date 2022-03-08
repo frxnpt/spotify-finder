@@ -1,0 +1,44 @@
+@import "../../styles/global";
+
+.listItem {
+	margin-top: 20px;
+	background-color: $darker;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	border-radius: 10px;
+}
+.itemImg {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	margin-right: 10px;
+}
+.itemInfo {
+	align-self: center;
+}
+.smallItemInfo {
+	align-self: left;
+	width: 100px;
+}
+.itemInfoTag {
+	color: $grey;
+	font-size: 12px;
+}
+
+.itemInfoGroup {
+	display: flex;
+	flex-direction: column;
+    align-self: center;
+}
+.itemLink {
+	align-self: center;
+	background-color: $green;
+	padding: 10px;
+	border-radius: 40px;
+	text-decoration: none;
+	color: white;
+}
+.itemContainer {
+	margin-bottom: 100px;
+}
