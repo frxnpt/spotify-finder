@@ -1,26 +1,30 @@
 import React from "react";
-import './InputSearch.scss'
+import "./InputSearch.scss";
+import { DebouncedFunc } from "lodash";
 
 type InputSearchProps = {
-    onSearch : (search: string) => void
-	onClear : () => void
-}
+	onSearch: DebouncedFunc<(searchQuery: string) => Promise<void>>
+	onClear: () => void;
+};
 
-export const InputSearch = ({onSearch, onClear}:InputSearchProps) => {
+export const InputSearch = ({ onSearch, onClear }: InputSearchProps) => {
 	const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const searchQuery = event.target.value;
+		console.log(searchQuery);
 		if (searchQuery === "") {
 			onClear();
 			return;
 		}
-		onSearch(searchQuery)
-	}
+		onSearch(searchQuery);
+	};
 	return (
-		<input
-			id="search"
-			onChange={onChange}
-			type="search"
-			placeholder="Artists, Tracks, Albums..."
-		/>
+		<div className="search-wrapper">
+			<input
+				id="search"
+				onChange={onChange}
+				type="search"
+				placeholder="Artists, Tracks, Albums..."
+			/>
+		</div>
 	);
 };
