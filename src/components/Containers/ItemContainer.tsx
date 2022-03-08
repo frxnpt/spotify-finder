@@ -6,14 +6,15 @@ type ItemContainerProps = {
     title: string;
 	small: boolean;
     children: any;
+	linkText: string;
+	linkRef: string;
 }
-export const ItemContainer = ({title, small, children} : ItemContainerProps) => {
-	const link = "/"+title
+export const ItemContainer = ({title, linkText, linkRef, small, children} : ItemContainerProps) => {
 	return (
 		<div className={printConditionally(small,"smallItemContainer","itemContainer")}>
 			<div className="containerTop">
 				<p className="containerTitle">{title}</p>
-				<Link to={link.toLowerCase()} >ViewAll</Link>
+				<Link className="pageLink" to={linkRef.toLowerCase()}>{linkText}</Link>
 			</div>
             {children}
 		</div>
